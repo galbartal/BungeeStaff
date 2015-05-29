@@ -18,32 +18,31 @@ public class Main extends Plugin implements Listener
         ProxiedPlayer player = (ProxiedPlayer)sender;
         if (player.hasPermission("staffchat.use")){
           if (args.length == 0){
-            player.sendMessage("§e**********§bStaffChat§e**********");
-            player.sendMessage("§aYour available chats:");
+            player.sendMessage("Â§eÂ§m--------------------Â§bStaffChatÂ§eÂ§m--------------------");
+            player.sendMessage("Â§aYour available chats:");
             if (player.hasPermission("staffchat.helper")) {
-              player.sendMessage("                        §eHelper - §a/chat helper {message}");
+              player.sendMessage("Â§eHelper - Â§a/chat helper {message}");
             }
             if (player.hasPermission("staffchat.mod")) {
-              player.sendMessage("                        §aMod - §a/chat mod {message}");
+              player.sendMessage("Â§2Mod - Â§a/chat mod {message}");
             }
             if (player.hasPermission("staffchat.admin")) {
-              player.sendMessage("                        §4Admin - §a/chat admin {message}");
+              player.sendMessage("Â§4Admin - Â§a/chat admin {message}");
             }
             if (player.hasPermission("staffchat.co-owner")) {
-              player.sendMessage("                        §cCo-Owner - §a/chat co-owner {message}");
+              player.sendMessage("Â§cCo-Owner - Â§a/chat co-owner {message}");
             }
             if (player.hasPermission("staffchat.all")) {
-              player.sendMessage("                        All Staff - §a/chat all {message}");
+              player.sendMessage("All Staff - Â§a/chat all {message}");
             }
-            player.sendMessage("§e**********§bStaffChat§e**********");
-            player.sendMessage("§6Author: §8gal0511");
+            player.sendMessage("Â§eÂ§m--------------------Â§bStaffChatÂ§eÂ§m--------------------");
             return;
           }
           if ((args[0].equalsIgnoreCase("helper")) && 
             (player.hasPermission("staffchat.helper")))
           {
             if (args.length == 1) {
-              player.sendMessage("§cPlease specify a message!");
+              player.sendMessage("Â§cPlease specify a message!");
             }
             if (args.length > 1)
             {
@@ -54,7 +53,7 @@ public class Main extends Plugin implements Listener
               String help = helps.toString();
               for (ProxiedPlayer p : Main.this.getProxy().getPlayers()) {
                 if (p.hasPermission("staffchat.helper")) {
-                  p.sendMessage("§9[§9HelperChat§9] §r" + player.getName() + ": " + help);
+                  p.sendMessage("Â§9[Â§9HelperChatÂ§9] Â§r" + player.getName() + ": " + help);
                 }
               }
             }
@@ -63,7 +62,7 @@ public class Main extends Plugin implements Listener
             (player.hasPermission("staffchat.mod")))
           {
             if (args.length == 1) {
-              player.sendMessage("§cPlease specify a message!");
+              player.sendMessage("Â§cPlease specify a message!");
             }
             if (args.length > 1)
             {
@@ -74,7 +73,7 @@ public class Main extends Plugin implements Listener
               String mod = mods.toString();
               for (ProxiedPlayer p : Main.this.getProxy().getPlayers()) {
                 if (p.hasPermission("staffchat.mod")) {
-                  player.sendMessage("§9[§2ModChat§9] §r" + player.getName() + ": " + mod);
+                  player.sendMessage("Â§9[Â§2ModChatÂ§9] Â§r" + player.getName() + ": " + mod);
                 }
               }
             }
@@ -83,7 +82,7 @@ public class Main extends Plugin implements Listener
             (player.hasPermission("staffchat.admin")))
           {
             if (args.length == 1) {
-              player.sendMessage("§cPlease specify a message!");
+              player.sendMessage("Â§cPlease specify a message!");
             }
             if (args.length > 1)
             {
@@ -94,7 +93,7 @@ public class Main extends Plugin implements Listener
               String admin = admins.toString();
               for (ProxiedPlayer p : Main.this.getProxy().getPlayers()) {
                 if (p.hasPermission("staffchat.admin")) {
-                  player.sendMessage("§9[§4AdminChat§9] §r" + player.getName() + ": " + admin);
+                  player.sendMessage("Â§9[Â§4AdminChatÂ§9] Â§r" + player.getName() + ": " + admin);
                 }
               }
             }
@@ -103,7 +102,7 @@ public class Main extends Plugin implements Listener
             (player.hasPermission("staffchat.co-owner")))
           {
             if (args.length == 1) {
-              player.sendMessage("§cPlease specify a message!");
+              player.sendMessage("Â§cPlease specify a message!");
             }
             if (args.length > 1)
             {
@@ -114,7 +113,7 @@ public class Main extends Plugin implements Listener
               String com = co.toString();
               for (ProxiedPlayer p : Main.this.getProxy().getPlayers()) {
                 if (p.hasPermission("staffchat.co-owner")) {
-                  player.sendMessage("§9[§cCo-OwnerChat§9] §r" + player.getName() + ": " + com);
+                  player.sendMessage("Â§9[Â§cCo-OwnerChatÂ§9] Â§r" + player.getName() + ": " + com);
                 }
               }
             }
@@ -123,7 +122,7 @@ public class Main extends Plugin implements Listener
             (player.hasPermission("staffchat.all")))
           {
             if (args.length == 1) {
-              player.sendMessage("§cPlease specify a message!");
+              player.sendMessage("Â§cPlease specify a message!");
             }
             if (args.length > 1)
             {
@@ -134,7 +133,7 @@ public class Main extends Plugin implements Listener
               String all = alls.toString();
               for (ProxiedPlayer p : Main.this.getProxy().getPlayers()) {
                 if (p.hasPermission("staffchat.all")) {
-                  player.sendMessage("§9[§bStaffChat§9] §r" + player.getName() + ": " + all);
+                  player.sendMessage("Â§9[Â§bStaffChatÂ§9] Â§r" + player.getName() + ": " + all);
                 }
               }
             }
